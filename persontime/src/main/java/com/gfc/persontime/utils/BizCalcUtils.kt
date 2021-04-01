@@ -49,7 +49,7 @@ class BizCalcUtils {
         fun getDateFromXY():String{
 
             val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
-            val d1 = sdf.parse("2021-03-25 20:00:00")
+            val d1 = sdf.parse("2021-04-01 20:00:00")
             val d2 =  Date()
 
             return "${daysBetween(d1, d2)}"
