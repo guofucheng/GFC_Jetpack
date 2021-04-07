@@ -1,3 +1,5 @@
+include ':javaproject'
+include ':myapplication'
 include ':persontime'
 include ':app'
 rootProject.name = "GFC_Jetpack"

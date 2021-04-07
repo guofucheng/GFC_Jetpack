@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
+
+<!--    <com.gfc.javaproject.CustomView-->
+<!--        android:id="@+id/cst"-->
+<!--        android:layout_width="50dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:background="@color/black"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <com.gfc.javaproject.MyViewGroup1
+        android:id="@+id/myViewGroup1"
+        android:background="#dddaaa"
+        android:layout_width="500dp"
+        android:layout_height="500dp">
+
+        <com.gfc.javaproject.MyViewGroup2
+            android:id="@+id/myViewGroup2"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:background="@color/purple_200"
+            >
+            <com.gfc.javaproject.CustomView
+                android:id="@+id/cts"
+                android:background="@color/black"
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
+
+        </com.gfc.javaproject.MyViewGroup2>
+
+
+    </com.gfc.javaproject.MyViewGroup1>
+
+
+</LinearLayout>
