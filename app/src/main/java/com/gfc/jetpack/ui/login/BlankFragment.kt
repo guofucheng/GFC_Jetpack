@@ -3,18 +3,16 @@ package com.gfc.jetpack.ui.login
 import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import com.gfc.jetpack.R
-import com.gfc.jetpack.databinding.FragmentLoginBinding
+
+class BlankFragment : Fragment() {
 
 
-class LoginFragment : Fragment() {
-
-    private val TAG = "LoginFragment"
+    private val TAG = "BlankFragment"
     fun print(str:String){
         Log.e(TAG,str)
     }
@@ -26,19 +24,13 @@ class LoginFragment : Fragment() {
         super.onAttach(context)
         print("onAttach")
     }
+
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
+        inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
-        print("onCreateView")
-        val binding = FragmentLoginBinding.inflate(inflater)
-        binding.btnTest.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_blankFragment)
-
-        }
-        return binding.root
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_blank, container, false)
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -89,6 +81,5 @@ class LoginFragment : Fragment() {
         super.onDetach()
         print("onDetach")
     }
-
 
 }
