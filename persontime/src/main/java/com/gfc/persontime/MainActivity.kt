@@ -24,9 +24,10 @@ class MainActivity : AppCompatActivity() {
         val datas = mutableListOf(
             MenuData("距离年后回京已有", BizCalcUtils.getDateFromBackBeijing(), CalcType.YEAR,false),
             MenuData("距离电商课程到期还有", BizCalcUtils.getDateFromLessonEnd(),CalcType.YEAR,true),
-            MenuData("已坚持学习自考课程", BizCalcUtils.getDateFromStartLesson(),CalcType.MONTH,true),
+            MenuData("已坚持不玩游戏", BizCalcUtils.getDateFromStartLesson(),CalcType.MONTH,true),
             MenuData("已坚持执行上传", "0",CalcType.MONTH,true),
-            MenuData("已保持定力", BizCalcUtils.getDateFromXY(),CalcType.MONTH,true),
+            MenuData("已坚持早睡（12:00前）", BizCalcUtils.getDateFromXY(),CalcType.MONTH,true),
+            MenuData("坚持执行学习计划", BizCalcUtils.getDateFromKeep(),CalcType.MONTH,true),
             MenuData("2021今年已过去", BizCalcUtils.getDateFromPast(),CalcType.YEAR,true)
 
         )
