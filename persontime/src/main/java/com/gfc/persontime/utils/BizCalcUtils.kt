@@ -44,12 +44,34 @@ class BizCalcUtils {
             return "${daysBetween(d1, d2)}"
         }
         /**
+         * 坚持不玩游戏多少天
+         */
+        fun getDateFromStartLesson2():String{
+
+            val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+            val d1 = sdf.parse("2021-04-07 20:00:00")
+            val d2 =  Date()
+
+            return "${daysBetween(d1, d2)}"
+        }
+        /**
          * 坚持早睡多少天
          */
         fun getDateFromXY():String{
 
             val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
             val d1 = sdf.parse("2021-04-05 20:00:00")
+            val d2 =  Date()
+
+            return "${daysBetween(d1, d2)}"
+        }
+        /**
+         * 坚持保持多少天
+         */
+        fun getDateFromKeepMy():String{
+
+            val sdf = SimpleDateFormat("yyyy-MM-dd HH:mm:ss")
+            val d1 = sdf.parse("2021-04-07 20:00:00")
             val d2 =  Date()
 
             return "${daysBetween(d1, d2)}"

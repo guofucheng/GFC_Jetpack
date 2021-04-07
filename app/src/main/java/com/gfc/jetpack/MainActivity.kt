@@ -7,11 +7,7 @@ import android.widget.Button
 import com.gfc.jetpack.base.BaseActivity
 import com.gfc.jetpack.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-    private val TAG = "MainActivity"
-    fun print(str:String){
-        Log.e(TAG,str)
-    }
+
 class MainActivity : BaseActivity() {
     override fun getTag(): String ="MainActivity"
 
@@ -61,15 +57,16 @@ class MainActivity : BaseActivity() {
         print("onAttachedToWindow")
     }
 
-    override fun onDetachedFromWindow() {
-        super.onDetachedFromWindow()
-        print("onDetachedFromWindow")
-        val mBinding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(mBinding.root)
-        mBinding.btns1.setOnClickListener {
-
-            startActivity(Intent(this@MainActivity,MainActivityA1::class.java))
-
-        }
-    }
+//
+//    override fun onDetachedFromWindow() {
+//        super.onDetachedFromWindow()
+//        print("onDetachedFromWindow")
+//        val mBinding = ActivityMainBinding.inflate(layoutInflater)
+//        setContentView(mBinding.root)
+//        mBinding.btns1.setOnClickListener {
+//
+//            startActivity(Intent(this@MainActivity,MainActivityA1::class.java))
+//
+//        }
+//    }
 }
