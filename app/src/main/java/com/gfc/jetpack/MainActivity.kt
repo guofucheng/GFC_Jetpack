@@ -3,12 +3,14 @@ package com.gfc.jetpack
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Button
+import com.gfc.jetpack.base.BaseActivity
+import com.gfc.jetpack.databinding.ActivityMainBinding
 
-class MainActivity : AppCompatActivity() {
-    private val TAG = "MainActivity"
-    fun print(str:String){
-        Log.e(TAG,str)
-    }
+
+class MainActivity : BaseActivity() {
+    override fun getTag(): String ="MainActivity"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -55,8 +57,16 @@ class MainActivity : AppCompatActivity() {
         print("onAttachedToWindow")
     }
 
-    override fun onDetachedFromWindow() {
-        super.onDetachedFromWindow()
-        print("onDetachedFromWindow")
-    }
+//
+//    override fun onDetachedFromWindow() {
+//        super.onDetachedFromWindow()
+//        print("onDetachedFromWindow")
+//        val mBinding = ActivityMainBinding.inflate(layoutInflater)
+//        setContentView(mBinding.root)
+//        mBinding.btns1.setOnClickListener {
+//
+//            startActivity(Intent(this@MainActivity,MainActivityA1::class.java))
+//
+//        }
+//    }
 }
