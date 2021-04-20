@@ -41,12 +41,12 @@ public class MyViewGroup2 extends LinearLayout {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.e(TAG,"onInterceptTouchEvent"+ev.getAction());
-        return super.onInterceptTouchEvent(ev);
+        return false;
     }
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         Log.e(TAG,"onTouchEvent"+event.getAction());
-        return super.onTouchEvent(event);
+        return false;
     }
 }

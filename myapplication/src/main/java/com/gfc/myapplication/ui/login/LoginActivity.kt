@@ -16,6 +16,7 @@ import android.widget.ProgressBar
 import android.widget.Toast
 
 import com.gfc.myapplication.R
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 class LoginActivity : AppCompatActivity() {
 
@@ -95,6 +96,8 @@ class LoginActivity : AppCompatActivity() {
                 loginViewModel.login(username.text.toString(), password.text.toString())
             }
         }
+
+
     }
 
     private fun updateUiWithUser(model: LoggedInUserView) {
