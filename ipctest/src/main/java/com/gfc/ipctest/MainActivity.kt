@@ -6,12 +6,18 @@ import android.content.ServiceConnection
 import android.os.Bundle
 import android.os.IBinder
 import android.widget.Button
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.gfc.ipctest.service.DownloadService
 
 
 class MainActivity : AppCompatActivity() {
     var service:DownloadService ?=null
+
+    val viewModel:MyViewModel by viewModels()
+
+
+
     val conn= object : ServiceConnection{
         override fun onServiceConnected(name: ComponentName?, binder: IBinder?) {
             val myBinder: DownloadService.MyBinder= binder as DownloadService.MyBinder

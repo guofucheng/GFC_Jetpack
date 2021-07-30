@@ -47,9 +47,11 @@ object ParamUtil {
                             Long::class.javaPrimitiveType -> {
                                 intent.getLong(key, 0L)
                             }
+
                             String::class.java -> {
                                 intent.getString(key)
                             }
+
                             Double::class.javaPrimitiveType -> {
                                 intent.getDouble(key, 0.0)
                             }
