@@ -2,6 +2,8 @@ package com.gfc.javaproject;
 
 import org.junit.Test;
 
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -28,6 +30,15 @@ import java.util.function.BiFunction;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws InterruptedException {
+
+        Subject subject = new SubjectImpl();
+
+        InvocationHandler subjectProxy = new SubjectProxy(subject);
+
+        Subject subject1 = (Subject) Proxy.newProxyInstance(subjectProxy.getClass().getClassLoader(), subject.getClass().getInterfaces(), subjectProxy);
+        subject1.hello("asd");
+
+
 //
 //        LinkedBlockingQueue<String> queue = new LinkedBlockingQueue<>();//单端FIFO队列 链表实现
 //        LinkedBlockingDeque<String> queue1 = new LinkedBlockingDeque<>();//双端队列 链表实现
