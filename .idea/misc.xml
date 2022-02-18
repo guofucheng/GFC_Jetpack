@@ -3,8 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/mqtt/src/main/res/layout/activity_main.xml" value="0.12916666666666668" />
+        <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/myapplication/src/main/res/drawable/btn_preset_val_drawable.xml" value="0.165625" />
+        <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/myapplication/src/main/res/drawable/button_rect_corner.xml" value="0.165625" />
+        <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/myapplication/src/main/res/drawable/edit_bg.xml" value="0.165625" />
         <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/myapplication/src/main/res/layout/activity_display_msg.xml" value="0.234765625" />
-        <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/myapplication/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/myapplication/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/myapplication/src/main/res/layout/fragment_caculate_page.xml" value="0.11527777777777778" />
+        <entry key="..\:/PrivateProject/AndroidProject/GFC_Jetpack/myapplication/src/main/res/layout/main_activity.xml" value="0.11527777777777778" />
+        <entry key="..\:/Source/PrivateSource/GFC_Jetpack/hiltbasic/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Source/PrivateSource/GFC_Jetpack/jetpack/src/main/res/layout/activity_home.xml" value="0.28061224489795916" />
       </map>
     </option>
   </component>

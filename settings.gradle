@@ -5,3 +5,6 @@ include ':myapplication'
 include ':persontime'
 include ':app'
 rootProject.name = "GFC_Jetpack"
+include ':mqtt'
+include ':hiltbasic'
+include ':demo1'

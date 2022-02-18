@@ -1,26 +1,41 @@
 package com.gfc.myapplication
 
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
-import android.view.View
-import android.widget.EditText
-import com.gfc.myapplication.ui.login.LoginActivity
 
-class MainActivity : AppCompatActivity() {
+import android.os.Bundle
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_main.*
+
+class MainActivity : AppCompatActivity(), UniversalInputDialog.OnDataCallback {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-    }
 
+        tv_verify.setOnClickListener {
 
-    fun send(v:View){
+            val universalInputDialog = UniversalInputDialog()
+            val args = Bundle()
+//            args.putInt("INPUT_TYPE", Common.INPUT_TYPE_CODE)
+//            universalInputDialog.arguments = args
+//            universalInputDialog.setOnDataCallback(this)
+//            universalInputDialog.codeMaxLen = 6
+//            universalInputDialog.show(supportFragmentManager, "universalInputDialog")
 
-        val edit=findViewById<EditText>(R.id.editTextTextPersonName).text.toString()
-        val intent=Intent(this,DisplayMsgActivity::class.java).apply {
-            putExtra("asd","qwe")
+            args.putInt("INPUT_TYPE", Common.INPUT_TYPE_MONEY)
+            universalInputDialog.arguments = args
+            universalInputDialog.setOnDataCallback(this)
+            universalInputDialog.maxLimit=9999.99
+            universalInputDialog.show(supportFragmentManager, "universalInputDialog")
         }
-        startActivity(intent)
+
 
     }
+
+    override fun onInput(str: String?) {
+        Toast.makeText(this, str!!, Toast.LENGTH_SHORT).show()
+        tv_verify.text = str
+    }
+
 }

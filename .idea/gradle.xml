@@ -12,9 +12,12 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/demo1" />
+            <option value="$PROJECT_DIR$/hiltbasic" />
             <option value="$PROJECT_DIR$/ipctest" />
             <option value="$PROJECT_DIR$/javaproject" />
             <option value="$PROJECT_DIR$/jetpack" />
+            <option value="$PROJECT_DIR$/mqtt" />
             <option value="$PROJECT_DIR$/myapplication" />
             <option value="$PROJECT_DIR$/persontime" />
           </set>

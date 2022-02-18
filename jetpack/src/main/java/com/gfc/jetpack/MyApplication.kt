@@ -2,6 +2,7 @@ package com.gfc.jetpack
 
 import android.app.Application
 import androidx.lifecycle.ProcessLifecycleOwner
+import dagger.hilt.android.HiltAndroidApp
 
 /**
  *
@@ -13,6 +14,7 @@ import androidx.lifecycle.ProcessLifecycleOwner
  * @UpdateRemark: 更新说明
  * @Version: 1.0
  */
+@HiltAndroidApp
 class MyApplication :Application() {
 
     override fun onCreate() {

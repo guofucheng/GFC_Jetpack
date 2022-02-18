@@ -1,5 +1,7 @@
 package com.gfc.javaproject;
 
+import android.util.Log;
+
 import org.junit.Test;
 
 import java.lang.reflect.InvocationHandler;
@@ -7,7 +9,9 @@ import java.lang.reflect.Proxy;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.ConcurrentHashMap;
@@ -28,15 +32,65 @@ import java.util.function.BiFunction;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
+
+    public void ss(List<?> ssss){
+
+        for (Object s:ssss
+             ) {
+
+        }
+
+    }
+
+    public <T> void sss(T t){
+
+
+    }
+
+
+    public <T> void print(T... ts){
+
+        for (T t: ts) {
+            System.out.println("===:"+t);
+        }
+    }
+
+
     @Test
     public void addition_isCorrect() throws InterruptedException {
 
-        Subject subject = new SubjectImpl();
+        print("asd",2,44.2f);
+        Student<String> str=new Student<>();
+        str.setScore("asd");
 
-        InvocationHandler subjectProxy = new SubjectProxy(subject);
 
-        Subject subject1 = (Subject) Proxy.newProxyInstance(subjectProxy.getClass().getClassLoader(), subject.getClass().getInterfaces(), subjectProxy);
-        subject1.hello("asd");
+        MyClass<Student<String>> cls=new MyClass<>();
+        cls.setCls(str);
+
+
+        Student<String> cls1 = cls.getCls();
+
+
+        Map<String,String> map=new HashMap<>();
+        map.put("a","1");
+        map.put("b","2");
+        map.put("c","3");
+
+        Set<Map.Entry<String, String>> entries = map.entrySet();
+        for (Map.Entry<String, String> entry:entries)
+        {
+            entry.getKey();
+
+        }
+
+
+//
+//        Subject subject = new SubjectImpl();
+//
+//        InvocationHandler subjectProxy = new SubjectProxy(subject);
+//
+//        Subject subject1 = (Subject) Proxy.newProxyInstance(subjectProxy.getClass().getClassLoader(), subject.getClass().getInterfaces(), subjectProxy);
+//        subject1.hello("asd");
 
 
 //

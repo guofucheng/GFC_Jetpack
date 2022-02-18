@@ -2,7 +2,8 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
 }
-
+apply plugin: 'kotlin-kapt'//hilt support
+apply plugin: 'dagger.hilt.android.plugin'//hilt support
 android {
     compileSdkVersion 30
     buildToolsVersion "30.0.3"
@@ -51,6 +52,9 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$rootProject.navigationVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+
+    implementation 'com.google.dagger:hilt-android:2.28-alpha'
+    kapt 'com.google.dagger:hilt-android-compiler:2.28-alpha'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
